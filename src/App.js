@@ -23,8 +23,8 @@ function App() {
         <h1 className="header-text">Welcome, Dijia</h1>
       </header>
       <section className="rose-content">
-        <img className="rose" src={`/roses/${rose}.jpg`} alt="rose" style={{width: 700, height: 700}} />    
-        <Button className="rose-btn" variant="contained" color="primary" onClick={pickRandomRose}>Get a new rose</Button>      
+          <img className="rose" src={`/roses/${rose}.jpg`} alt="rose" style={{width: 700, height: 700}} />    
+          <Button className="rose-btn" variant="contained" color="primary" onClick={pickRandomRose}>Get a new rose</Button>      
       </section>
     </div>
   );
