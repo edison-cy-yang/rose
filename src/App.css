@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+rose {
+  width: 700;
+  height: 700;
+  background-color: 'red';
+}
