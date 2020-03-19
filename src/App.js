@@ -6,7 +6,7 @@ function App() {
   const [rose, setRose] = useState(0);
   
   const pickRandomRose = () => {
-    const randomNumber = getRandomInt(0, 3);
+    const randomNumber = getRandomInt(0, 9);
     console.log(randomNumber);
     setRose(randomNumber);
   }
