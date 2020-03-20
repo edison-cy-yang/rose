@@ -44,14 +44,13 @@
 }
 
 .rose-btn {
-  width: 350px;
+  width: 400px;
   height: 60px;
 }
 
 .btn-text {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Pacifico', cursive;
   font-size: large;
-  font-weight: bold;
 }
 
 .header {
@@ -74,8 +73,7 @@
 
 .header-text {
   color: white;
-  font-style: italic;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Pacifico', cursive;
 }
 
 .loading-indicator {
