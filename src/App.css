@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .App-logo {
@@ -40,30 +40,49 @@
 }
 
 .rose {
-  width: 700;
-  height: 700;
+  margin: 10px;
 }
 
 .rose-btn {
-  width: 200px;
+  width: 350px;
   height: 60px;
+}
+
+.btn-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bold;
 }
 
 .header {
   background-color: #3b5998;
   width: 100%;
   height: 80px;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .rose-content {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  top: 80px;
 }
 
 .header-text {
   color: white;
   font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.loading-indicator {
+  margin: 10px;
+  width: 1080px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
