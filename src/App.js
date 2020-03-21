@@ -10,7 +10,7 @@ function App() {
   const pickRandomRose = () => {
     setLoading(true);
     setTimeout(() => {
-      const randomNumber = getRandomInt(0, 11);
+      const randomNumber = getRandomInt(0, 12);
       console.log(randomNumber);
       setRose(randomNumber);
       setLoading(false);
