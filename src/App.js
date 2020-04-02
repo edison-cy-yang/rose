@@ -4,13 +4,14 @@ import Button from '@material-ui/core/Button';
 import { CircularProgress } from '@material-ui/core';
 
 function App() {
-  const [rose, setRose] = useState(0);
+  const [rose, setRose] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [date, setDate] = useState(new Date().getDate());
   
   const pickRandomRose = () => {
     setLoading(true);
     setTimeout(() => {
-      const randomNumber = getRandomInt(0, 13);
+      const randomNumber = getRandomInt(1, 18);
       console.log(randomNumber);
       setRose(randomNumber);
       setLoading(false);
@@ -24,9 +25,9 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("useEffect");
     setTimeout(() => {
       setLoading(false);
+      setRose(date);
     }, 1000);
   }, []);
 
