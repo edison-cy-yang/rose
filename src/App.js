@@ -4,13 +4,15 @@ import Button from '@material-ui/core/Button';
 import { CircularProgress } from '@material-ui/core';
 
 function App() {
-  const [rose, setRose] = useState(0);
+  const [rose, setRose] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [date, setDate] = useState(new Date().getDate());
+  const [requested, setRequested] = useState(false);
   
   const pickRandomRose = () => {
     setLoading(true);
     setTimeout(() => {
-      const randomNumber = getRandomInt(0, 13);
+      const randomNumber = getRandomInt(1, 18);
       console.log(randomNumber);
       setRose(randomNumber);
       setLoading(false);
@@ -23,11 +25,20 @@ function App() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  useEffect(() => {
-    console.log("useEffect");
+  const requestFlower = () => {
+    setLoading(true);
+    setRequested(true);
     setTimeout(() => {
+      setRose(date);
       setLoading(false);
     }, 1000);
+  }
+
+  useEffect(() => {
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   setRose(date);
+    // }, 1000);
   }, []);
 
   return (
@@ -36,15 +47,16 @@ function App() {
         <h1 className="header-text">Welcome, Dijia</h1>
       </header>
       <section className="rose-content">
-          {!loading && (          
+        
+          {!loading && requested && (          
             <img className="rose" src={`/roses/${rose}.jpg`} alt="rose" style={{width: 1080, height: 700}} />
           )}
-          {loading && (
+          {requested && loading && (
             <div className="loading-indicator">
               <CircularProgress />
             </div>
           )}
-          <Button className="rose-btn" variant="contained" color="primary" onClick={pickRandomRose}><span className="btn-text">Get a new flower💐🌷🌸🌹🌺🌻</span></Button>  
+          <Button className="rose-btn" variant="contained" color="primary" onClick={requestFlower}><span className="btn-text">Request today's flower💐🌷🌸🌹🌺🌻</span></Button>  
       </section>
     </div>
   );
